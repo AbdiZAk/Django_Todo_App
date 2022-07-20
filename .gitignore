@@ -1,0 +1,17 @@
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+staticfiles*
+media
+todo_app/.env
+.venv
+*.bak
+.idea
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+

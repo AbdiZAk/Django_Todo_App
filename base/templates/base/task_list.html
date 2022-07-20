@@ -1,0 +1,57 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+    <div class="header-bar">
+        <div>
+            <h1>Hello {{ request.user|title }}</h1>
+            <h3 style="margin: 0">You have <i style="color: red">{{ count }}</i> incomplete task{{ count|pluralize:"s" }}.</h3>
+        </div>
+
+        <p>{% if request.user.is_authenticated %}</p>
+            <small>Last Login: {{ request.user.last_login|date}}</small>
+        <button type="button" class="btn"><a href="{% url 'logout' %}">Logout</a></button>
+        {% else %}
+        <button type="button" class="btn"><a href="{% url 'login' %}">Login</a></button>
+        {% endif %}
+
+    </div>
+
+
+<hr>
+    <h1>My To Do List {{color}}</h1>
+<form class="form" method="GET">
+    <input class="form-fields" type="text" name="search-area" value="{{ search_input }}">
+    <input class="submit" type="submit" value="Search">
+
+</form>
+        <button type="button" class="btn"><a href="{% url 'task-create' %}">Create New Task</a></button>
+
+    <div class="tasks">
+    {% for task in tasks  %}
+        <div class="task">
+        {% if task.complete %}
+            <a class="task-title" href="{% url 'task' task.id %}"><s><p>{{ task.title }}</p></s></a>
+            <div class="task-items">
+            <a class="task-edit btn" href="{% url 'task-update' task.id %}">Edit Task</a>
+            <a class="task-delete btn" href="{% url 'task-delete' task.id %}">Delete</a>
+                <p style="color: #b3d900">Completed</p>
+            </div>
+            {% else %}
+
+            <a class="task-title" href="{% url 'task' task.id %}"><p>{{ task.title }}</p></a>
+            <div class="task-items">
+            <a class="task-edit btn" href="{% url 'task-update' task.id %}">Edit Task</a>
+            <a class="task-delete btn" href="{% url 'task-delete' task.id %}">Delete</a>
+                <p style="color: #e30707">Incomplete</p>
+                </div>
+            {% endif %}
+
+        </div>
+    {% empty %}
+        <h3>No Tasks Created Yet</h3>
+
+    {% endfor %}
+    </div>
+{% endblock content %}
+
+

@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+{% block content %}
+    <div class="task-info">
+    <a class="btn" href="{% url 'tasks' %}">&#8592; Go back</a>
+        <h2>Task: {{ task.title|title }}</h2>
+        <p><strong>Description:</strong> {{ task.description|title }}</p>
+        <p><strong>Created:</strong> {{ task.created|date }}</p>
+        <form class="form" method="POST">
+            {% csrf_token %}
+{#            {{ form.as_p}}#}
+                {{ form.as_p}}
+            <input class="submit" type="submit" value="submit">
+        </form>
+
+    </div>
+    {% endblock content %}

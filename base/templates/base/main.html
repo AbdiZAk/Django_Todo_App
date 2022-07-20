@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'icons/site.webmanifest' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>To Do Items</title>
+</head>
+<body>
+<div class="wrapper">
+<div class="container">
+    {% block content %}
+
+
+    {% endblock content %}
+
+</div>
+
+<footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-box">
+                <p>Page Last Updated 7/19/2022</p>
+                <p>Copyright <span>&copy;</span> 2022 Abdirezak Yusuf</p>
+            </div>
+            <div id="socials" class="footer-box">
+                <a href="https://www.linkedin.com/in/abdirezak-yusuf-a86944233/" target="_blank">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="github logo"> LinkedIn Profile
+                </a><br>
+                <a href="https://github.com/AbdiZAk" target="_blank">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github logo">github/AbdiZAk</a><br>
+
+            </div>
+        </div>
+</footer>
+</div>
+</body>
+
+
+</html>
