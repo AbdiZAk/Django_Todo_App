@@ -237,6 +237,12 @@ label{
 
 }
 
+.error{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 @media (max-width: 470px) {
      .container {
         max-width: 350px;
