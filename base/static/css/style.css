@@ -1,3 +1,6 @@
+
+
+
 body {
     background-color: aliceblue;
     font-family: 'Overlock SC', cursive;
@@ -141,11 +144,6 @@ label{
     height: 100px;
 }
 
-.footer-box a, p{
-    color: #b0acae;
-}
-
-
 
 
 .footer-grid{
@@ -161,12 +159,9 @@ label{
 
 /*################*/
 @media (max-height: 700px) {
-    /*.footer-grid{*/
-    /*    display: grid;*/
-    /*    grid-template-columns: 1fr ;*/
-    /*    gap: 1px;*/
-    /*    !*margin-top: 170px;*!*/
-    /*}*/
+    .footer{
+        bottom: -180px;
+    }
 
     .task p{
         margin-left: 0;
