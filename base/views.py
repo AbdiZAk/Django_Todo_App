@@ -1,3 +1,4 @@
+from time import sleep
 from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -14,6 +15,7 @@ from .forms import CustomUserCreationForm
 
 
 class CustomLoginView(LoginView):
+    sleep(0.6)
     template_name = 'base/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
@@ -41,6 +43,7 @@ class RegisterPage(FormView):
 
 
 class TaskList(LoginRequiredMixin, ListView):
+    sleep(0.01)
     model = Task
     context_object_name = 'tasks'
 
