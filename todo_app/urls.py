@@ -26,9 +26,4 @@ urlpatterns = [
 handler404 = 'base.views.page_not_found_view'
 handler500 = 'base.views.error_page'
 
-IGNORABLE_404_URLS = [
-    re.compile(r'^/apple-touch-icon.*\.png$'),
-    re.compile(r'^/favicon\.ico$'),
-    re.compile(r'^/robots\.txt$'),
-]
 

@@ -30,8 +30,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['aytodoapp.herokuapp.com']
+# ALLOWED_HOSTS = ['aytodoapp.herokuapp.com', 'https://aytodoapp.herokuapp.com/']
 
 # Application definition
 
